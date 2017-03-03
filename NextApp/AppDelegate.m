@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "NAEntryTableViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    NAEntryTableViewController *entryVC = [NAEntryTableViewController new];
+    
+    UINavigationController *navigationController = [[UINavigationController alloc]initWithRootViewController:entryVC];
+    self.window.rootViewController = navigationController;
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

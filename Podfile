@@ -35,6 +35,7 @@ pod 'Bugly'
 #the newest version only suppport swift
 pod  'ReactiveCocoa', '2.5'
 
+
 end
 
 target 'NextAppTests' do
