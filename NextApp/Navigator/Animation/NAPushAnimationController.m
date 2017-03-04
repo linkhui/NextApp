@@ -6,12 +6,12 @@
 //  Copyright (c) 2014年 xiami. All rights reserved.
 //
 
-#import "TTPushAnimationController.h"
+#import "NAPushAnimationController.h"
 #define kTTPushTransitionTime 0.35
-@interface TTPushAnimationController()
+@interface NAPushAnimationController()
 @property(nonatomic,assign)CGFloat navigationBarOffset;
 @end
-@implementation TTPushAnimationController
+@implementation NAPushAnimationController
 
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext{
     self.transitionContext = transitionContext;

@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSString (ALMURLQuery)
+@interface NSString (NAURLQuery)
 
 + (NSString *)makeQueryFromQuery:(NSString *)query
                    withAppending:(NSString *)appending;

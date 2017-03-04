@@ -1,5 +1,5 @@
 //
-//  TTInteractionController.h
+//  NAInteractionController.h
 //  xiami
 //
 //  Created by Li Jianfeng on 14/11/28.
@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-#import "TTInteractionProtocol.h"
-@interface TTInteractionController : UIPercentDrivenInteractiveTransition
+#import "NAInteractionProtocol.h"
+@interface NAInteractionController : UIPercentDrivenInteractiveTransition
 <TTTransitionInteractionController, UIGestureRecognizerDelegate>
 
 @property (nonatomic, weak) UIViewController *fromViewController;

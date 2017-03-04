@@ -1,16 +1,16 @@
 //
-//  TTRouterImp.m
+//  NARouterImp.m
 //  Pods
 //
 //  Created by Li Jianfeng on 15/11/30.
 //
 //
 
-#import "TTRouterImp.h"
+#import "NARouterImp.h"
 #import <objc/message.h>
 #import <UIKit/UIKit.h>
-#import "ALMUtility.h"
-#import "NSString+ALMURLQuery.h"
+#import "NAUtility.h"
+#import "NSString+NAURLQuery.h"
 #import "NSString+UrlEncode.h"
 
 static NSMutableDictionary* splitQuery(NSString* query, NSStringEncoding encoding = NSUTF8StringEncoding) {
@@ -40,17 +40,17 @@ static NSMutableDictionary* splitQuery(NSString* query, NSStringEncoding encodin
     }
     return pairs;
 }
-@interface TTRouterImp ()
+@interface NARouterImp ()
 @property (nonatomic,strong)NSMutableDictionary * handlerFactoryDic;
 @property (nonatomic,strong)NSMutableDictionary *patternHandlerClassDic;
 @property (nonatomic,strong)NSMutableDictionary *patternBlockDic;
 @end
 
-@implementation TTRouterImp
+@implementation NARouterImp
 +(instancetype)instance {
-    static TTRouterImp* __instance = nil;
+    static NARouterImp* __instance = nil;
     if (!__instance) {
-        __instance = [[TTRouterImp alloc] init];
+        __instance = [[NARouterImp alloc] init];
     }
     return __instance;
 }
@@ -68,11 +68,11 @@ static NSMutableDictionary* splitQuery(NSString* query, NSStringEncoding encodin
 
 -(instancetype)newSubRouter:(NSString*)pattern {
     if ([pattern isEqualToString:@".*"] || [pattern isEqualToString:@"(.*)"]) {
-        return [TTRouterImp instance];
+        return [NARouterImp instance];
     }
-    TTRouterImp* r = [TTRouterImp new];
+    NARouterImp* r = [NARouterImp new];
     
-    [self addRoute:[NSString stringWithFormat:@"%@(.*)", pattern] block:^id(TTRouterContext *ctx) {
+    [self addRoute:[NSString stringWithFormat:@"%@(.*)", pattern] block:^id(NARouterContext *ctx) {
         ctx.handled = NO;
         BOOL a = ctx.handled;
       return   [r _routURL:ctx.url urlPath:ctx.matchPaths[0] outparams:ctx.queryParams handler: &a];
@@ -114,10 +114,10 @@ static NSMutableDictionary* splitQuery(NSString* query, NSStringEncoding encodin
     return urlpath;
 }
 
--(TTRouterResult *)route:(NSString*)urlString {
+-(NARouterResult *)route:(NSString*)urlString {
     return [self route:urlString parameters:nil];
 }
--(TTRouterResult *)route:(NSString *)urlString parameters:(NSDictionary*)parameters {
+-(NARouterResult *)route:(NSString *)urlString parameters:(NSDictionary*)parameters {
     NSRange queryRange = [urlString rangeOfString:@"?"];
     NSMutableDictionary *decodedParamters = [NSMutableDictionary dictionary];
     if (parameters != nil) {
@@ -180,15 +180,15 @@ static NSMutableDictionary* splitQuery(NSString* query, NSStringEncoding encodin
     NSAssert(FALSE, @"url is null");
     return nil;
 }
--(TTRouterResult *)routeURL:(NSURL*)url {
+-(NARouterResult *)routeURL:(NSURL*)url {
     return [self routeURL:url parameters:nil];
 }
--(TTRouterResult *)routeURL:(NSURL*)url parameters:(NSDictionary*)parameters {
+-(NARouterResult *)routeURL:(NSURL*)url parameters:(NSDictionary*)parameters {
     return [self routeURL:url parameters:parameters asyn:FALSE];
 }
--(TTRouterResult *)routeURL:(NSURL *)url parameters:(NSDictionary *)parameters asyn:(BOOL)basyn {
-    if ([TTRouterImp instance] != self) {
-        return [[TTRouterImp instance] routeURL:url parameters:parameters asyn:basyn];
+-(NARouterResult *)routeURL:(NSURL *)url parameters:(NSDictionary *)parameters asyn:(BOOL)basyn {
+    if ([NARouterImp instance] != self) {
+        return [[NARouterImp instance] routeURL:url parameters:parameters asyn:basyn];
     }
     
     NSAssert([NSThread isMainThread], @"only in main thread");
@@ -204,8 +204,8 @@ static NSMutableDictionary* splitQuery(NSString* query, NSStringEncoding encodin
     return      [self _routURL:url parameters:parameters];
 }
 -(void)routeURL:(NSURL *)url parameters:(NSDictionary *)parameters waitSeconds:(double)sec {
-    if ([TTRouterImp instance] != self) {
-        return [[TTRouterImp instance] routeURL:url parameters:parameters waitSeconds:sec];
+    if ([NARouterImp instance] != self) {
+        return [[NARouterImp instance] routeURL:url parameters:parameters waitSeconds:sec];
     }
     NSAssert([NSThread isMainThread], @"only in main thread");
     [UIApplication sharedApplication].keyWindow.userInteractionEnabled = NO;
@@ -215,7 +215,7 @@ static NSMutableDictionary* splitQuery(NSString* query, NSStringEncoding encodin
         [self _routURL:url parameters:parameters];
     });
 }
--(TTRouterResult *)_routURL:(NSURL *)url parameters:(NSDictionary *)parameters{
+-(NARouterResult *)_routURL:(NSURL *)url parameters:(NSDictionary *)parameters{
     NSAssert(url != nil, @"url shoud not be nil");
     NSAssert(url.absoluteString.length > 0, @"url should be valid");
     
@@ -233,7 +233,7 @@ static NSMutableDictionary* splitQuery(NSString* query, NSStringEncoding encodin
     }
     NSDictionary* outparams = params ? [params copy] : [parameters copy];
     BOOL bHandled = FALSE; // 没有使用，一直是NO
-    TTRouterResult *result = [self _routURL:url urlPath:urlpath outparams:outparams handler:&bHandled];
+    NARouterResult *result = [self _routURL:url urlPath:urlpath outparams:outparams handler:&bHandled];
     
     if (result.canFindHandler) {
         return result;
@@ -278,11 +278,11 @@ static NSMutableDictionary* splitQuery(NSString* query, NSStringEncoding encodin
     return newUrl;
 }
 
--(TTRouterResult *)_routURL:(NSURL *)url  urlPath:(NSString *)urlpath  outparams:(NSDictionary *)outparams handler:(BOOL* )bHandled{
+-(NARouterResult *)_routURL:(NSURL *)url  urlPath:(NSString *)urlpath  outparams:(NSDictionary *)outparams handler:(BOOL* )bHandled{
       NSError* err = nil;
     NSMutableDictionary *patternDic  = [NSMutableDictionary dictionaryWithDictionary:self.patternHandlerClassDic];
     [patternDic addEntriesFromDictionary:self.patternBlockDic];
-    TTRouterResult *result = [TTRouterResult new];
+    NARouterResult *result = [NARouterResult new];
     result.canFindHandler = NO;
     for(NSString *key in [patternDic allKeys]){
         NSRegularExpression* re = [NSRegularExpression regularExpressionWithPattern:key
@@ -308,7 +308,7 @@ static NSMutableDictionary* splitQuery(NSString* query, NSStringEncoding encodin
                 }
                 
                 @try {
-                    TTRouterContext *context = [TTRouterContext contextWithUrl:url matchPaths:array queryParam:outparams];
+                    NARouterContext *context = [NARouterContext contextWithUrl:url matchPaths:array queryParam:outparams];
                     result = [self handle:key context:context withHandler:patternDic[key]];
                     return  result;
                 }
@@ -326,7 +326,7 @@ static NSMutableDictionary* splitQuery(NSString* query, NSStringEncoding encodin
     return result;
 }
 
--(TTRouterResult *)handle:(NSString *)pattern context:(TTRouterContext *)context withHandler:(id)handler{
+-(NARouterResult *)handle:(NSString *)pattern context:(NARouterContext *)context withHandler:(id)handler{
     if ([handler isKindOfClass:[NSArray class]]) {
         id handleResult = nil;
         NSArray *arr = handler;
@@ -346,7 +346,7 @@ static NSMutableDictionary* splitQuery(NSString* query, NSStringEncoding encodin
             SuppressPerformSelectorLeakWarning([handler performSelector:sel withObject:context]);
             handleResult =  nil;
         }
-       TTRouterResult *result = [TTRouterResult new];
+       NARouterResult *result = [NARouterResult new];
        result.canFindHandler = YES;
         result.hanleResult = handleResult;
         return result;

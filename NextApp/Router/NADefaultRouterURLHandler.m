@@ -1,16 +1,16 @@
 //
-//  TTDefaultRouterURLHandler.m
+//  NADefaultRouterURLHandler.m
 //  Pods
 //
 //  Created by Li Jianfeng on 15/12/29.
 //
 //
 
-#import "TTDefaultRouterURLHandler.h"
+#import "NADefaultRouterURLHandler.h"
 #import "NANavigator.h"
-#import "TTRouterContext.h"
-@implementation TTDefaultRouterURLHandler
-- (void)back:(TTRouterContext* )ctx {
+#import "NARouterContext.h"
+@implementation NADefaultRouterURLHandler
+- (void)back:(NARouterContext* )ctx {
     id viewCon =  [ctx.queryParams objectForKey:@"viewController"];
     Class viewController = NSClassFromString(viewCon);
     if (viewController == nil) {
@@ -27,7 +27,7 @@
         }
     }
 }
--(void)interPage:(TTRouterContext* )ctx{
+-(void)interPage:(NARouterContext* )ctx{
     NSString *viewControllerName =ctx.matchPaths[0];
     [[NANavigator sharedInstance]  showController:NSClassFromString(viewControllerName) withParam:ctx.queryParams];
 }

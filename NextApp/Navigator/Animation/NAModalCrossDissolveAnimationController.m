@@ -1,18 +1,18 @@
 //
-//  TTModalCrossDissolveAnimationController.m
+//  NAModalCrossDissolveAnimationController.m
 //  TTUISkeleton
 //
 //  Created by alibaba on 16/11/25.
 //  Copyright © 2016年 Taobao lnc. All rights reserved.
 //
 
-#import "TTModalCrossDissolveAnimationController.h"
+#import "NAModalCrossDissolveAnimationController.h"
 
-@interface TTModalCrossDissolveAnimationController ()
+@interface NAModalCrossDissolveAnimationController ()
 
 @end
 
-@implementation TTModalCrossDissolveAnimationController
+@implementation NAModalCrossDissolveAnimationController
 
 ////////////////////////////////////////////////////////////////////////////////
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext {

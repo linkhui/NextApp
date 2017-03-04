@@ -1,13 +1,13 @@
 //
-//  TTRouter.h
+//  NARouter.h
 //  TTUISkeleton
 //
 //  Created by guanshanliu on 11/20/15.
 //  Copyright © 2015 TTPod. All rights reserved.
 //
 
-#import "TTRouting.h"
-@interface TTRouter : NSObject <TTRouting>
+#import "NARouting.h"
+@interface NARouter : NSObject <NARouting>
 /*
  * Router单例
  */

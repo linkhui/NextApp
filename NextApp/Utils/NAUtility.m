@@ -6,7 +6,7 @@
 //
 //
 
-#import "ALMUtility.h"
+#import "NAUtility.h"
 
 BOOL isNullForALM(id value) {
     return (!value || [value isKindOfClass:[NSNull class]]);

@@ -11,7 +11,7 @@
 
 @protocol TTViewControllerAnimatedTransitioning <UIViewControllerAnimatedTransitioning>
 @end
-@interface TTAnimationController : NSObject<TTViewControllerAnimatedTransitioning>
+@interface NAAnimationController : NSObject<TTViewControllerAnimatedTransitioning>
 @property (nonatomic ,assign)BOOL isPositiveAnimation;
 
 @property (strong, nonatomic) id <UIViewControllerContextTransitioning>transitionContext; //需要在动画结束后设置成nil

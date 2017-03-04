@@ -6,8 +6,8 @@
 //  Copyright (c) 2014年 xiami. All rights reserved.
 //
 
-#import "TTAnimationController.h"
+#import "NAAnimationController.h"
 
-@interface TTModalAnimationController : TTAnimationController
+@interface NAModalAnimationController : NAAnimationController
 
 @end

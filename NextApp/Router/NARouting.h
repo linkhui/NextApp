@@ -1,5 +1,5 @@
 //
-//  TTRouting.h
+//  NARouting.h
 //  TTUISkeleton
 //
 //  Created by guanshanliu on 11/20/15.
@@ -7,15 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TTRouterResult.h"
+#import "NARouterResult.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol TTRouting <NSObject>
+@protocol NARouting <NSObject>
 
-- (TTRouterResult *)route:(NSString *)urlString
+- (NARouterResult *)route:(NSString *)urlString
                 withParam:(nullable NSDictionary *)param;
 
-- (TTRouterResult *)route:(NSString *)urlString
+- (NARouterResult *)route:(NSString *)urlString
                 withParam:(nullable NSDictionary *)param
        fromViewController:(UIViewController *)viewController;
 
@@ -23,11 +23,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @optional
 
-- (TTRouterResult *)route:(NSString *)urlString
+- (NARouterResult *)route:(NSString *)urlString
                 withParam:(nullable NSDictionary *)param
           withRequestCode:(NSInteger)requestCode;
 
-- (TTRouterResult *)route:(NSString *)urlString
+- (NARouterResult *)route:(NSString *)urlString
                 withParam:(nullable NSDictionary *)param
        fromViewController:(UIViewController *)viewController
           withRequestCode:(NSInteger)requestCode;

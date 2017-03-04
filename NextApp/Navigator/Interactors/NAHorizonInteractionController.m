@@ -6,11 +6,11 @@
 //  Copyright (c) 2014年 xiami. All rights reserved.
 //
 
-#import "TTHorizonInteractionController.h"
+#import "NAHorizonInteractionController.h"
 
 #define kTTHorizontalTransitionCompletionPercentage 0.3f
 
-@implementation TTHorizonInteractionController
+@implementation NAHorizonInteractionController
 
 - (BOOL)isGesturePositive:(UIPanGestureRecognizer *)panGestureRecognizer
 {

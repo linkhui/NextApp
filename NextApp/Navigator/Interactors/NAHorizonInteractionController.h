@@ -6,8 +6,8 @@
 //  Copyright (c) 2014年 xiami. All rights reserved.
 //
 
-#import "TTInteractionController.h"
+#import "NAInteractionController.h"
 
-@interface TTHorizonInteractionController : TTInteractionController
+@interface NAHorizonInteractionController : NAInteractionController
 
 @end

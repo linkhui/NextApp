@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "NAEntryTableViewController.h"
 #import "NANavigator.h"
-#import "TTRouter+Load.h"
+#import "NARouter+Load.h"
 
 @interface AppDelegate ()
 
@@ -28,7 +28,7 @@
     
     [NANavigator sharedInstance].navigationController = navigationController;
     
-    [TTRouter loadAllScheme];
+    [NARouter loadAllScheme];
 
     
     return YES;

@@ -1,14 +1,14 @@
 //
-//  TTRouter+Load.m
+//  NARouter+Load.m
 //  Pods
 //
 //  Created by Li Jianfeng on 15/12/29.
 //
 //
 
-#import "TTRouter+Load.h"
+#import "NARouter+Load.h"
 
-@implementation TTRouter (Load)
+@implementation NARouter (Load)
 + (void)loadAllScheme{
     NSArray * array = [[NSBundle mainBundle]pathsForResourcesOfType:@"plist" inDirectory:@"."];
     NSMutableArray *schemes = [NSMutableArray arrayWithCapacity:5];
@@ -35,7 +35,7 @@
             NSString* classname = dic[@"class"];
             NSString* sel = dic[@"selector"];
             if (pattern && classname && sel ) {
-                [[TTRouter defaultRouter]addPattern:pattern withHandlerClassName:classname selectorName:sel forScheme:scheme];
+                [[NARouter defaultRouter]addPattern:pattern withHandlerClassName:classname selectorName:sel forScheme:scheme];
             }
         }
     }

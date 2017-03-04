@@ -8,7 +8,7 @@
 
 #import "NAEntryTableViewController.h"
 #import "NAViewController.h"
-#import "TTRouter.h"
+#import "NARouter.h"
 
 @interface NAEntryTableViewController ()
 
@@ -68,7 +68,7 @@
 //    vc.view.backgroundColor = [UIColor whiteColor];
 //    [self.navigationController pushViewController:vc animated:YES];
     
-    [[TTRouter defaultRouter] route:@"nextapp:///interpage/NAViewController" withParam:nil];
+    [[NARouter defaultRouter] route:@"nextapp:///interpage/NAViewController" withParam:nil];
 }
 
 @end

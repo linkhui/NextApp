@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "TTAnimationController.h"
-@interface TTPushAnimationController : TTAnimationController
+#import "NAAnimationController.h"
+@interface NAPushAnimationController : NAAnimationController
 
 @end

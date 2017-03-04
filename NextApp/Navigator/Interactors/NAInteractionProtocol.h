@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIkit.h>
 
-#import "TTTransition.h"
+#import "NATransition.h"
 @protocol TTTransitionInteractionController;
 @protocol TTTransitionInteractionControllerDelegate;
 

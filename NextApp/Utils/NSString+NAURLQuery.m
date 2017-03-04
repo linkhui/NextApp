@@ -6,9 +6,9 @@
 //  Copyright © 2016年 Taobao lnc. All rights reserved.
 //
 
-#import "NSString+ALMURLQuery.h"
+#import "NSString+NAURLQuery.h"
 
-@implementation NSString (ALMURLQuery)
+@implementation NSString (NAURLQuery)
 
 + (NSString *)makeQueryFromQuery:(NSString *)query
                    withAppending:(NSString *)appending {

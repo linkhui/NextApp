@@ -6,7 +6,7 @@
 //  Copyright (c) 2014年 xiami. All rights reserved.
 //
 #import <UIKit/UIKit.h>
-#import "TTAnimationController.h"
+#import "NAAnimationController.h"
 
 #define kTTPushTransitionTime 0.35
 
@@ -16,7 +16,7 @@ static NSString * const TTViewControllerTransitioWasCancelledKey = @"TTViewContr
 static NSString * const TTViewControllerTransitionDidCompleteNotification = @"TTViewControllerTransitionDidCompleteNotification";
 
 
-@implementation TTAnimationController
+@implementation NAAnimationController
 
 @synthesize isPositiveAnimation = _isPositiveAnimation;
 

@@ -6,11 +6,11 @@
 //  Copyright (c) 2014年 xiami. All rights reserved.
 //
 
-#import "TTTransition.h"
+#import "NATransition.h"
 
 
 
-@implementation TTTransition
+@implementation NATransition
 
 #pragma mark - Equality overrides
 
@@ -29,7 +29,7 @@
 
 - (id)copyWithZone:(NSZone *)zone
 {
-    TTTransition *copiedObject = [[[self class] allocWithZone:zone] init];
+    NATransition *copiedObject = [[[self class] allocWithZone:zone] init];
     
     copiedObject.transitionStyle = self.transitionStyle;
     copiedObject.toViewControllerClass = self.toViewControllerClass;
@@ -45,11 +45,11 @@
 
 - (BOOL)isEqual:(id)object
 {
-    if (![object isKindOfClass:[TTTransition class]]) {
+    if (![object isKindOfClass:[NATransition class]]) {
         return NO;
     }
     
-    TTTransition *otherObject = (TTTransition *)object;
+    NATransition *otherObject = (NATransition *)object;
     
     return (otherObject.transitionStyle & self.transitionStyle) &&
     (otherObject.fromViewControllerClass == self.fromViewControllerClass) &&

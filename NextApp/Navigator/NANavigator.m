@@ -7,23 +7,23 @@
 //
 
 #import "NANavigator.h"
-#import "TTInteractionController.h"
-#import "TTHorizonInteractionController.h"
-#import "TTAnimationController.h"
-#import "TTModalAnimationController.h"
-#import "TTPushAnimationController.h"
-#import "TTModalCrossDissolveAnimationController.h"
+#import "NAInteractionController.h"
+#import "NAHorizonInteractionController.h"
+#import "NAAnimationController.h"
+#import "NAModalAnimationController.h"
+#import "NAPushAnimationController.h"
+#import "NAModalCrossDissolveAnimationController.h"
 #import "NAViewController.h"
 
 
 @interface NANavigator()
-@property(nonatomic,strong) TTInteractionController *interactionController;
+@property(nonatomic,strong) NAInteractionController *interactionController;
 -(void)setParams:(NSDictionary*)params withObj:(id)obj;
 @end
 @implementation NANavigator
 -(instancetype)init{
     if (self = [super init]) {
-        self.interactionController = [TTHorizonInteractionController new];
+        self.interactionController = [NAHorizonInteractionController new];
     }
     return self;
 }
@@ -127,7 +127,7 @@
     }else{
         presentStyle = [(NAViewController *)toVC presentStyle];
     }
-    TTAnimationController *animation = [self animationControllerForPresentStyle:presentStyle];
+    NAAnimationController *animation = [self animationControllerForPresentStyle:presentStyle];
     animation.isPositiveAnimation  = isPostiveAnimation;
     return animation;
 }
@@ -140,13 +140,13 @@
     return nil;
 }
 
--(TTAnimationController *)animationControllerForPresentStyle:(TTViewControllerPresentStyle )style{
+-(NAAnimationController *)animationControllerForPresentStyle:(TTViewControllerPresentStyle )style{
    if (style == TTViewControllerPresentStyleModal) {
-        return [TTModalAnimationController new];
+        return [NAModalAnimationController new];
     } else if (style == TTViewControllerPresentStyleModalCrossDissolve) {
-        return [TTModalCrossDissolveAnimationController new];
+        return [NAModalCrossDissolveAnimationController new];
     } else {
-        return [TTPushAnimationController new];
+        return [NAPushAnimationController new];
     }
 }
 

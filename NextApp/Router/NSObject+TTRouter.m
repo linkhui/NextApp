@@ -1,5 +1,5 @@
 //
-//  NSObject+TTRouter.m
+//  NSObject+NARouter.m
 //  TTUISkeleton
 //
 //  Created by guanshanliu on 11/20/15.
@@ -7,20 +7,20 @@
 //
 
 #import "NSObject+TTRouter.h"
-#import "TTRouter.h"
+#import "NARouter.h"
 
 @implementation NSObject (TTRouter)
 
 - (id)route:(NSString *)urlString withParam:(NSDictionary *)param {
-    return   [[TTRouter defaultRouter] route:urlString withParam:param];
+    return   [[NARouter defaultRouter] route:urlString withParam:param];
 }
 
 - (id)route:(NSString *)urlString withParam:(NSDictionary *)param fromViewController:(UIViewController *)viewController {
-    return   [[TTRouter defaultRouter] route:urlString withParam:param fromViewController:viewController];
+    return   [[NARouter defaultRouter] route:urlString withParam:param fromViewController:viewController];
 }
 
 - (BOOL)couldRouteBySchemeHandler:(NSString *)urlString {
-    return [[TTRouter defaultRouter] couldRouteBySchemeHandler:urlString];
+    return [[NARouter defaultRouter] couldRouteBySchemeHandler:urlString];
 }
 
 

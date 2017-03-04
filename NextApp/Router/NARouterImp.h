@@ -1,5 +1,5 @@
 //
-//  TTRouterImp.h
+//  NARouterImp.h
 //  Pods
 //
 //  Created by Li Jianfeng on 15/11/30.
@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "TTRouterContext.h"
-#import "TTRouterResult.h"
+#import "NARouterContext.h"
+#import "NARouterResult.h"
 /*
  schemeurl 回调上下文
  
@@ -18,9 +18,9 @@
  handled: 指定是否处理了本schemeurl, 为false 时其它的回调可以继续处理, default = yes
  */
 
-typedef TTRouterResult* (^TTRoutehandler)(TTRouterContext*  ctx);
+typedef NARouterResult* (^TTRoutehandler)(NARouterContext*  ctx);
 
-@interface TTRouterImp : NSObject
+@interface NARouterImp : NSObject
 +(instancetype)instance;
 
 /*
@@ -28,8 +28,8 @@ typedef TTRouterResult* (^TTRoutehandler)(TTRouterContext*  ctx);
  pattern: url 前缀
  
  exp:
- [[TTRouterImp instance] newSubRouter:@"xiami://"];
- [[TTRouterImp instance] newSubRouter:@"http://"]
+ [[NARouterImp instance] newSubRouter:@"xiami://"];
+ [[NARouterImp instance] newSubRouter:@"http://"]
  */
 -(instancetype)newSubRouter:(NSString*)pattern;
 
@@ -41,11 +41,11 @@ typedef TTRouterResult* (^TTRoutehandler)(TTRouterContext*  ctx);
  
  @return: 返回schemeurl 处理函数的返回值，未处理返回nil， asyn = yes 时 直接返回 nil
  */
--(TTRouterResult *)route:(NSString*)urlString;
--(TTRouterResult *)route:(NSString *)urlString parameters:(NSDictionary*)parameters;
--(TTRouterResult *)routeURL:(NSURL*)url;
--(TTRouterResult *)routeURL:(NSURL*)url parameters:(NSDictionary*)parameters;
--(TTRouterResult *)routeURL:(NSURL*)url parameters:(NSDictionary*)parameters asyn:(BOOL)basyn;
+-(NARouterResult *)route:(NSString*)urlString;
+-(NARouterResult *)route:(NSString *)urlString parameters:(NSDictionary*)parameters;
+-(NARouterResult *)routeURL:(NSURL*)url;
+-(NARouterResult *)routeURL:(NSURL*)url parameters:(NSDictionary*)parameters;
+-(NARouterResult *)routeURL:(NSURL*)url parameters:(NSDictionary*)parameters asyn:(BOOL)basyn;
 
 /*
  同步执行处理指定的url

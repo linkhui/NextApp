@@ -1,16 +1,16 @@
 //
-//  NSObject+TTRouter.h
+//  NSObject+NARouter.h
 //  TTUISkeleton
 //
 //  Created by guanshanliu on 11/20/15.
 //  Copyright © 2015 TTPod. All rights reserved.
 //
 
-#import "TTRouting.h"
+#import "NARouting.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NSObject (TTRouter) <TTRouting>
+@interface NSObject (TTRouter) <NARouting>
 
 @end
 

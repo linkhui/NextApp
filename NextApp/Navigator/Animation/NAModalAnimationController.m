@@ -6,9 +6,9 @@
 //  Copyright (c) 2014年 xiami. All rights reserved.
 //
 
-#import "TTModalAnimationController.h"
+#import "NAModalAnimationController.h"
 #define kTTModalTransitionTime 0.35
-@implementation TTModalAnimationController
+@implementation NAModalAnimationController
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext{
     self.transitionContext = transitionContext;
     UIViewController *fromViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];

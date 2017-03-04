@@ -13,7 +13,7 @@ typedef NS_ENUM (NSInteger, TTTransitionStyle) {
     TTTransitionStyleShare          = (1 << 2),
    
 };
-@interface TTTransition : NSObject
+@interface NATransition : NSObject
 
 @property (assign, nonatomic) TTTransitionStyle transitionStyle;
 

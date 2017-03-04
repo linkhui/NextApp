@@ -8,7 +8,7 @@
 			<key>pattern</key>
 			<string>/interBack</string>
 			<key>class</key>
-			<string>TTDefaultRouterURLHandler</string>
+			<string>NADefaultRouterURLHandler</string>
 			<key>selector</key>
 			<string>back:</string>
 		</dict>
@@ -16,7 +16,7 @@
 			<key>pattern</key>
 			<string>/interPage/(.*)</string>
 			<key>class</key>
-			<string>TTDefaultRouterURLHandler</string>
+			<string>NADefaultRouterURLHandler</string>
 			<key>selector</key>
 			<string>interPage:</string>
 		</dict>

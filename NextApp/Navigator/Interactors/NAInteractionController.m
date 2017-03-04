@@ -1,16 +1,16 @@
 //
-//  TTInteractionController.m
+//  NAInteractionController.m
 //  xiami
 //
 //  Created by Li Jianfeng on 14/11/28.
 //  Copyright (c) 2014年 xiami. All rights reserved.
 //
 
-#import "TTInteractionController.h"
+#import "NAInteractionController.h"
 #import "NAViewController.h"
 #define kXInteractionDefaultCompletionPercentage  0.3f
 
-@implementation TTInteractionController{
+@implementation NAInteractionController{
     BOOL  _isReplacedGestureBegan;
 }
 @synthesize style = _style;
