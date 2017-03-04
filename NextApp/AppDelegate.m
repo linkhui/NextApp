@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "NAEntryTableViewController.h"
+#import "NANavigator.h"
+#import "TTRouter+Load.h"
 
 @interface AppDelegate ()
 
@@ -23,6 +25,11 @@
     UINavigationController *navigationController = [[UINavigationController alloc]initWithRootViewController:entryVC];
     self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];
+    
+    [NANavigator sharedInstance].navigationController = navigationController;
+    
+    [TTRouter loadAllScheme];
+
     
     return YES;
 }

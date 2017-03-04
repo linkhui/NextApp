@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>nextapp</key>
+	<array>
+		<dict>
+			<key>pattern</key>
+			<string>/interBack</string>
+			<key>class</key>
+			<string>TTDefaultRouterURLHandler</string>
+			<key>selector</key>
+			<string>back:</string>
+		</dict>
+		<dict>
+			<key>pattern</key>
+			<string>/interPage/(.*)</string>
+			<key>class</key>
+			<string>TTDefaultRouterURLHandler</string>
+			<key>selector</key>
+			<string>interPage:</string>
+		</dict>
+	</array>
+</dict>
+</plist>

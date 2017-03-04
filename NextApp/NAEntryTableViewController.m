@@ -7,6 +7,8 @@
 //
 
 #import "NAEntryTableViewController.h"
+#import "NAViewController.h"
+#import "TTRouter.h"
 
 @interface NAEntryTableViewController ()
 
@@ -62,9 +64,11 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    UIViewController *vc = [UIViewController new];
-    vc.view.backgroundColor = [UIColor whiteColor];
-    [self.navigationController pushViewController:vc animated:YES];
+//    NAViewController *vc = [NAViewController new];
+//    vc.view.backgroundColor = [UIColor whiteColor];
+//    [self.navigationController pushViewController:vc animated:YES];
+    
+    [[TTRouter defaultRouter] route:@"nextapp:///interpage/NAViewController" withParam:nil];
 }
 
 @end

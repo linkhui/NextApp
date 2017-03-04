@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "9FF7E4AF7DA94E04CADA119EED7B7141BC88D714",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "36DD2352D24E1C50E4CC531A607BEC9BC9A2988A" : 9223372036854775807,
+    "9FF7E4AF7DA94E04CADA119EED7B7141BC88D714" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "ED571765-D0F5-4D2B-BAB4-3F4AFBBC9524",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "36DD2352D24E1C50E4CC531A607BEC9BC9A2988A" : "TTUISkeleton\/",
+    "9FF7E4AF7DA94E04CADA119EED7B7141BC88D714" : "NextApp\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "NextApp",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "NextApp.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "gitlab.alibaba-inc.com:TTPod-iOS\/TTUISkeleton.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "36DD2352D24E1C50E4CC531A607BEC9BC9A2988A"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/linkhui\/NextApp.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9FF7E4AF7DA94E04CADA119EED7B7141BC88D714"
+    }
+  ]
+}
