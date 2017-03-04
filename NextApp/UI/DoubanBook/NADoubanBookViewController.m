@@ -20,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = @"Douban book";
+    self.title = @"Douban books";
     [self.viewModel fetchDoubanBook:^(id result, NSError *error) {
         [self.tableView reloadData];
     }];
@@ -42,7 +42,7 @@
 */
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return self.viewModel.booksCount;
 }
 
 
@@ -51,9 +51,10 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cell"];
     }
-    cell.textLabel.text = self.viewModel.model.title;
-    cell.detailTextLabel.text = self.viewModel.model.summary;
-    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:self.viewModel.model.image]];
+    DoubanBookModel *book = self.viewModel.model.books[indexPath.row];
+    cell.textLabel.text = book.title;
+    cell.detailTextLabel.text = book.summary;
+    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:book.image]];
 
     return cell;
 }

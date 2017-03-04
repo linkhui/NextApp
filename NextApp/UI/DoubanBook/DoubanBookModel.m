@@ -11,3 +11,7 @@
 @implementation DoubanBookModel
 
 @end
+
+@implementation DoubanBooksModel
+
+@end

@@ -7,11 +7,20 @@
 //
 
 #import "NABaseModel.h"
+@protocol DoubanBookModel
+
+@end
 
 @interface DoubanBookModel : NABaseModel
 
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *image;
 @property (nonatomic, strong) NSString *summary;
+
+@end
+
+@interface DoubanBooksModel : NABaseModel
+
+@property (nonatomic, strong) NSArray<DoubanBookModel> *books;
 
 @end

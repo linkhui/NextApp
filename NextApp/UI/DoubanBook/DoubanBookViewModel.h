@@ -5,13 +5,15 @@
 
 #import <Foundation/Foundation.h>
 
-@class DoubanBookModel;
+@class DoubanBooksModel;
 
 typedef void(^ViewModelCallback)(id result, NSError *error);
 
 @interface DoubanBookViewModel : NSObject
 
-@property (nonatomic, strong)DoubanBookModel *model;
+@property (nonatomic, strong)DoubanBooksModel *model;
+
+@property (nonatomic, assign)NSInteger booksCount;
 
 - (void)fetchDoubanBook:(ViewModelCallback)callback;
 
