@@ -2,7 +2,7 @@
 //  NSString+ALMURLQuery.m
 //  AliMusicWeex
 //
-//  Created by DjangoZhang on 16/7/6.
+//  Created by  on 16/7/6.
 //  Copyright © 2016年 Taobao lnc. All rights reserved.
 //
 

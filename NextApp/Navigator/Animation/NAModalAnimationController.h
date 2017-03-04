@@ -2,7 +2,7 @@
 //  XModalAnimationController.h
 //  xiami
 //
-//  Created by Li Jianfeng on 14/12/1.
+//  Created by  on 14/12/1.
 //  Copyright (c) 2014年 xiami. All rights reserved.
 //
 

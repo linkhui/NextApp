@@ -91,18 +91,6 @@
 - (void)fetchDoubanBook {
 
     [[NARouter defaultRouter] route:@"nextapp:///interpage/NADoubanBookViewController" withParam:nil];
-    return;
-
-
-    NAAPIRequest *request = [NAAPIRequest  new];
-    request.requestURL = [NSURL URLWithString:@"https://api.douban.com/v2/book/1220562"];
-    NAAPIService *api = [NAAPIService  new];
-    [api request:request callback:^(NAAPIRequest *request, id result, NSError *error) {
-        if (error == nil && [result isKindOfClass:[NSDictionary class]]) {
-            NSDictionary *bookInfo = (NSDictionary *)result;
-            NSLog(@"title: %@",bookInfo[@"title"]);
-        }
-    }];
 }
 
 @end
