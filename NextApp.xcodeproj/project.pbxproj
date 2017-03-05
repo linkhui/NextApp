@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6233A5D3FA82EBF85F92A9E5 /* NAWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6233ADEFC00922A8D76B8CCA /* NAWebViewController.m */; };
 		6233A5E64A980DB8AB82410A /* NAAPIService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6233A7206CB9FBB9251D24BE /* NAAPIService.m */; };
 		6233A934C7F5B9AA3A771376 /* NAAPIRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6233AC60C16BC905BF34852A /* NAAPIRequest.m */; };
 		6233ABEE3C35DBA8D95F4972 /* DoubanBookViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6233A10ED5AF7E29DD7E13CA /* DoubanBookViewModel.m */; };
@@ -58,9 +59,11 @@
 		6233A7206CB9FBB9251D24BE /* NAAPIService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NAAPIService.m; sourceTree = "<group>"; };
 		6233A915A913034A995AA633 /* DoubanBookViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoubanBookViewModel.h; sourceTree = "<group>"; };
 		6233A92FE185664BB61523C7 /* NAAPIService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NAAPIService.h; sourceTree = "<group>"; };
+		6233A94B4D2B2C4752B4C03D /* NAWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NAWebViewController.h; sourceTree = "<group>"; };
 		6233A9C91B2449CE23836922 /* NAAPIRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NAAPIRequest.h; sourceTree = "<group>"; };
 		6233AC60C16BC905BF34852A /* NAAPIRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NAAPIRequest.m; sourceTree = "<group>"; };
 		6233AD60B2345E1FD36E3321 /* NATableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NATableViewController.h; sourceTree = "<group>"; };
+		6233ADEFC00922A8D76B8CCA /* NAWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NAWebViewController.m; sourceTree = "<group>"; };
 		6233AE704B533BAC0FF40781 /* NATableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NATableViewController.m; sourceTree = "<group>"; };
 		9C1307491E69C63800AFAE66 /* NAEntryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NAEntryTableViewController.h; sourceTree = "<group>"; };
 		9C13074A1E69C63800AFAE66 /* NAEntryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NAEntryTableViewController.m; sourceTree = "<group>"; };
@@ -163,6 +166,15 @@
 				6233A92FE185664BB61523C7 /* NAAPIService.h */,
 			);
 			path = ApiCore;
+			sourceTree = "<group>";
+		};
+		6233AB61004C85C377595510 /* Webview */ = {
+			isa = PBXGroup;
+			children = (
+				6233ADEFC00922A8D76B8CCA /* NAWebViewController.m */,
+				6233A94B4D2B2C4752B4C03D /* NAWebViewController.h */,
+			);
+			path = Webview;
 			sourceTree = "<group>";
 		};
 		9C13074C1E6A374300AFAE66 /* Router */ = {
@@ -281,6 +293,7 @@
 				9CAF525A1E67B080003B08B5 /* Info.plist */,
 				9CAF52461E67B080003B08B5 /* Supporting Files */,
 				6233A6CB02E489829CB57F44 /* ApiCore */,
+				6233AB61004C85C377595510 /* Webview */,
 			);
 			path = NextApp;
 			sourceTree = "<group>";
@@ -523,6 +536,7 @@
 				6233A5E64A980DB8AB82410A /* NAAPIService.m in Sources */,
 				6233ADA5D2C613A5A2CC8174 /* NATableViewController.m in Sources */,
 				6233ABEE3C35DBA8D95F4972 /* DoubanBookViewModel.m in Sources */,
+				6233A5D3FA82EBF85F92A9E5 /* NAWebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

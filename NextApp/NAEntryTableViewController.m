@@ -7,10 +7,11 @@
 //
 
 #import "NAEntryTableViewController.h"
-#import "NAViewController.h"
 #import "NARouter.h"
 #import "NAAPIService.h"
 #import "NAAPIRequest.h"
+
+#import "NAWebViewController.h"
 
 @interface NAEntryTableViewController ()
 
@@ -33,7 +34,7 @@
 }
 
 - (void)buildEntries {
-    self.entries = @[@"api",@"image"];
+    self.entries = @[@"api - douban search books",@"RAC", @"h5 - baidu.com", @"weex"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -68,6 +69,12 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == 0) {
         [self fetchDoubanBook];
+        return;
+    }
+
+    if (indexPath.row == 2) {
+        NAWebViewController *webViewController = [[NAWebViewController alloc] initWithAddress:@"https://www.baidu.com"];
+        [self.navigationController pushViewController:webViewController animated:YES];
         return;
     }
     

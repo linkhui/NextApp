@@ -19,6 +19,8 @@ pod 'Masonry'
 pod 'MBProgressHUD'
 pod 'SVPullToRefresh'
 
+pod 'SVWebViewController', :head
+
 pod 'AFNetworking'
 pod 'Reachability'
 
