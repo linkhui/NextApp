@@ -33,6 +33,7 @@
 		9C1307BF1E6A53A200AFAE66 /* NAUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1307BE1E6A53A200AFAE66 /* NAUtility.m */; };
 		9C1307C31E6A549500AFAE66 /* NAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1307C21E6A549500AFAE66 /* NAViewController.m */; };
 		9C1307C51E6A5A0400AFAE66 /* NARouter_scheme_url.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C1307C41E6A5A0400AFAE66 /* NARouter_scheme_url.plist */; };
+		9C99A5B31E6F0D500020AA82 /* testjsbridge.html in Resources */ = {isa = PBXBuildFile; fileRef = 9C99A5B21E6F0D500020AA82 /* testjsbridge.html */; };
 		9CAF52481E67B080003B08B5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAF52471E67B080003B08B5 /* main.m */; };
 		9CAF524B1E67B080003B08B5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAF524A1E67B080003B08B5 /* AppDelegate.m */; };
 		9CAF52561E67B080003B08B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CAF52551E67B080003B08B5 /* Assets.xcassets */; };
@@ -108,6 +109,7 @@
 		9C1307C11E6A549500AFAE66 /* NAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NAViewController.h; sourceTree = "<group>"; };
 		9C1307C21E6A549500AFAE66 /* NAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NAViewController.m; sourceTree = "<group>"; };
 		9C1307C41E6A5A0400AFAE66 /* NARouter_scheme_url.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = NARouter_scheme_url.plist; sourceTree = "<group>"; };
+		9C99A5B21E6F0D500020AA82 /* testjsbridge.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = testjsbridge.html; path = Resources/testjsbridge.html; sourceTree = "<group>"; };
 		9CAF52431E67B080003B08B5 /* NextApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NextApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CAF52471E67B080003B08B5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9CAF52491E67B080003B08B5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -302,6 +304,7 @@
 			isa = PBXGroup;
 			children = (
 				9CAF52471E67B080003B08B5 /* main.m */,
+				9C99A5B21E6F0D500020AA82 /* testjsbridge.html */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -441,6 +444,7 @@
 			files = (
 				9CAF52591E67B080003B08B5 /* LaunchScreen.storyboard in Resources */,
 				9C1307C51E6A5A0400AFAE66 /* NARouter_scheme_url.plist in Resources */,
+				9C99A5B31E6F0D500020AA82 /* testjsbridge.html in Resources */,
 				9CAF52561E67B080003B08B5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -34,7 +34,7 @@
 }
 
 - (void)buildEntries {
-    self.entries = @[@"api - douban search books",@"RAC", @"h5 - baidu.com", @"weex"];
+    self.entries = @[@"api - douban search books",@"RAC", @"h5 - baidu.com", @"weex", @"js bridge"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -74,6 +74,12 @@
 
     if (indexPath.row == 2) {
         NAWebViewController *webViewController = [[NAWebViewController alloc] initWithAddress:@"https://www.baidu.com"];
+        [self.navigationController pushViewController:webViewController animated:YES];
+        return;
+    }
+
+    if (indexPath.row == 4) {
+        NAWebViewController *webViewController = [[NAWebViewController alloc] initWithAddress:@"http://192.168.1.106/testjsbridge.html"];
         [self.navigationController pushViewController:webViewController animated:YES];
         return;
     }
