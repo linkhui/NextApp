@@ -3,10 +3,16 @@
 // Copyright (c) 2017 appgo. All rights reserved.
 //
 
+/**
+ 关于WebViewJavascriptBridge的使用参考：
+ http://www.open-open.com/lib/view/open1457508380203.html#articleHeader7
+ http://www.2cto.com/kf/201503/384998.html
+ */
+
 #import "NAWebViewController.h"
 #import "WebViewJavascriptBridge.h"
 
-@interface NAWebViewController()
+@interface NAWebViewController() <UIWebViewDelegate>
 
 @property(nonatomic, strong) WebViewJavascriptBridge *bridge;
 
@@ -16,12 +22,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+
+
 
     // 开启日志，方便调试
     [WebViewJavascriptBridge enableLogging];
 
     // 给哪个webview建立JS与OjbC的沟通桥梁
     self.bridge = [WebViewJavascriptBridge bridgeForWebView:self.webView];
+    [self.bridge setWebViewDelegate:self];
 
     // JS主动调用OjbC的方法
 // 这是JS会调用getUserIdFromObjC方法，这是OC注册给JS调用的
@@ -35,10 +45,19 @@
         }
     }];
 
+    [self.bridge registerHandler:@"getBlogNameFromObjC" handler:^(id data, WVJBResponseCallback responseCallback) {
+        NSLog(@"js call getBlogNameFromObjC, data from js is %@", data);
+        if (responseCallback) {
+            // 反馈给JS
+            responseCallback(@{@"blogName": @"标哥的技术博客"});
+        }
+    }];
+
     //直接调用JS端注册的HandleName
     [self.bridge callHandler:@"getUserInfos" data:@{@"name": @"标哥"} responseCallback:^(id responseData) {
         NSLog(@"from js: %@", responseData);
     }];
+    
 }
 
 

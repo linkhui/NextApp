@@ -79,7 +79,13 @@
     }
 
     if (indexPath.row == 4) {
-        NAWebViewController *webViewController = [[NAWebViewController alloc] initWithAddress:@"http://192.168.1.106/testjsbridge.html"];
+        NSString *htmlPath = [[NSBundle mainBundle] pathForResource:@"test" ofType:@"html"];
+        NSString *appHtml = [NSString stringWithContentsOfFile:htmlPath encoding:NSUTF8StringEncoding error:nil];
+//        NSURL *baseURL = [NSURL fileURLWithPath:htmlPath];
+//        [self.webView loadHTMLString:appHtml baseURL:baseURL];
+        NSString *url =appHtml;
+        url = @"http://192.168.1.106/testjsbridge.html";
+        NAWebViewController *webViewController = [[NAWebViewController alloc] initWithAddress:url];
         [self.navigationController pushViewController:webViewController animated:YES];
         return;
     }
