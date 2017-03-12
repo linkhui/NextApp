@@ -12,6 +12,7 @@
 #import "NAAPIRequest.h"
 
 #import "NAWebViewController.h"
+#import "NAWeexViewController.h"
 
 @interface NAEntryTableViewController ()
 
@@ -75,6 +76,14 @@
     if (indexPath.row == 2) {
         NAWebViewController *webViewController = [[NAWebViewController alloc] initWithAddress:@"https://www.baidu.com"];
         [self.navigationController pushViewController:webViewController animated:YES];
+        return;
+    }
+    
+    if (indexPath.row == 3) {
+        //console run :weex debug tech_list.we
+        NAWeexViewController *weexViewController = [NAWeexViewController new];
+        weexViewController.url = [NSURL URLWithString:@""@"http://192.168.1.114:8088/weex/tech_list.js"];
+        [self.navigationController pushViewController:weexViewController animated:YES];
         return;
     }
 

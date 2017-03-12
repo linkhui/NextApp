@@ -10,6 +10,7 @@
 #import "NAEntryTableViewController.h"
 #import "NANavigator.h"
 #import "NARouter+Load.h"
+#import <WeexSDK/WeexSDK.h>
 
 @interface AppDelegate ()
 
@@ -30,6 +31,7 @@
     
     [NARouter loadAllScheme];
 
+    [self setupWeexConfiguration];
     
     return YES;
 }
@@ -61,5 +63,21 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (void)setupWeexConfiguration {
+    //business configuration
+    [WXAppConfiguration setAppGroup:@"NextAppGroup"];
+    [WXAppConfiguration setAppName:@"NextApp"];
+    [WXAppConfiguration setAppVersion:@"1.0.0"];
+    //init sdk enviroment
+    [WXSDKEngine initSDKEnviroment];
+    
+    //register custom module and component，optional
+//    [WXSDKEngine registerComponent:@"MyView" withClass:[MyViewComponent class]];
+//    [WXSDKEngine registerModule:@"event" withClass:[WXEventModule class]];
+    //register the implementation of protocol, optional
+//    [WXSDKEngine registerHandler:[WXNavigationDefaultImpl new] withProtocol:@protocol(WXNavigationProtocol)];
+    //set the log level
+    [WXLog setLogLevel: WXLogLevelAll];
+}
 
 @end

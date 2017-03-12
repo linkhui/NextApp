@@ -33,6 +33,8 @@
 		9C1307BF1E6A53A200AFAE66 /* NAUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1307BE1E6A53A200AFAE66 /* NAUtility.m */; };
 		9C1307C31E6A549500AFAE66 /* NAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1307C21E6A549500AFAE66 /* NAViewController.m */; };
 		9C1307C51E6A5A0400AFAE66 /* NARouter_scheme_url.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C1307C41E6A5A0400AFAE66 /* NARouter_scheme_url.plist */; };
+		9C7100951E75940B002BC791 /* NAWeexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C7100941E75940B002BC791 /* NAWeexViewController.m */; };
+		9C7100971E75A050002BC791 /* tech_list.we in Resources */ = {isa = PBXBuildFile; fileRef = 9C7100961E75A050002BC791 /* tech_list.we */; };
 		9CAD34BC1E704F5B004BF5CD /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = 9CAD34BA1E704F5B004BF5CD /* test.html */; };
 		9CAF52481E67B080003B08B5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAF52471E67B080003B08B5 /* main.m */; };
 		9CAF524B1E67B080003B08B5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAF524A1E67B080003B08B5 /* AppDelegate.m */; };
@@ -109,6 +111,9 @@
 		9C1307C11E6A549500AFAE66 /* NAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NAViewController.h; sourceTree = "<group>"; };
 		9C1307C21E6A549500AFAE66 /* NAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NAViewController.m; sourceTree = "<group>"; };
 		9C1307C41E6A5A0400AFAE66 /* NARouter_scheme_url.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = NARouter_scheme_url.plist; sourceTree = "<group>"; };
+		9C7100931E75940B002BC791 /* NAWeexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NAWeexViewController.h; sourceTree = "<group>"; };
+		9C7100941E75940B002BC791 /* NAWeexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NAWeexViewController.m; sourceTree = "<group>"; };
+		9C7100961E75A050002BC791 /* tech_list.we */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tech_list.we; sourceTree = "<group>"; };
 		9CAD34BA1E704F5B004BF5CD /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
 		9CAF52431E67B080003B08B5 /* NextApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NextApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CAF52471E67B080003B08B5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -259,9 +264,19 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		9C7100921E7593CB002BC791 /* Weex */ = {
+			isa = PBXGroup;
+			children = (
+				9C7100931E75940B002BC791 /* NAWeexViewController.h */,
+				9C7100941E75940B002BC791 /* NAWeexViewController.m */,
+			);
+			path = Weex;
+			sourceTree = "<group>";
+		};
 		9CAD34B91E704F5B004BF5CD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9C7100961E75A050002BC791 /* tech_list.we */,
 				9CAD34BA1E704F5B004BF5CD /* test.html */,
 			);
 			path = Resources;
@@ -305,6 +320,7 @@
 				9CAF52461E67B080003B08B5 /* Supporting Files */,
 				6233A6CB02E489829CB57F44 /* ApiCore */,
 				6233AB61004C85C377595510 /* Webview */,
+				9C7100921E7593CB002BC791 /* Weex */,
 			);
 			path = NextApp;
 			sourceTree = "<group>";
@@ -450,6 +466,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C7100971E75A050002BC791 /* tech_list.we in Resources */,
 				9CAF52591E67B080003B08B5 /* LaunchScreen.storyboard in Resources */,
 				9C1307C51E6A5A0400AFAE66 /* NARouter_scheme_url.plist in Resources */,
 				9CAD34BC1E704F5B004BF5CD /* test.html in Resources */,
@@ -524,6 +541,7 @@
 				9C13075D1E6A374400AFAE66 /* NARouter+Load.m in Sources */,
 				9C1307B41E6A528700AFAE66 /* NAInteractionController.m in Sources */,
 				9CAF524B1E67B080003B08B5 /* AppDelegate.m in Sources */,
+				9C7100951E75940B002BC791 /* NAWeexViewController.m in Sources */,
 				9C1307601E6A374400AFAE66 /* NARouterImp.mm in Sources */,
 				9C13075F1E6A374400AFAE66 /* NARouterContext.m in Sources */,
 				9C1307BC1E6A534000AFAE66 /* NSString+UrlEncode.m in Sources */,

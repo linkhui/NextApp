@@ -19,7 +19,7 @@ pod 'Masonry'
 pod 'MBProgressHUD'
 pod 'SVPullToRefresh'
 
-pod 'SVWebViewController', :head
+pod 'SVWebViewController', :path=>'/Users/lihui/Work/ttpod_code/SVWebViewController'
 
 pod 'AFNetworking'
 pod 'Reachability'
@@ -37,6 +37,8 @@ pod 'Bugly'
 #the newest version only suppport swift
 pod  'ReactiveCocoa', '2.5'
 
+
+pod 'WeexSDK'
 
 end
 
